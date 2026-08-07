@@ -1,0 +1,31 @@
+*.iml
+
+# Gradle
+.gradle
+/build
+**/build/
+
+# Configuración local
+/local.properties
+local.properties
+
+# Android Studio
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# Capturas
+/captures
+
+# Native
+.externalNativeBuild
+.cxx
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
