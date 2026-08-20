@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/black"
+        android:text="Seleccionar sitios"
+        android:textSize="25sp"
+        android:fontFamily="@font/super_bouncer"
+
+        android:layout_gravity="center"
+        />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/grupoFiltros"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+        app:chipSpacing="8dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipWalmart"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:checkable="true"
+            android:checked="true"
+            android:text="Walmart"
+            app:chipStrokeWidth="0.3dp"
+            android:padding="50dp"
+            app:chipBackgroundColor="@color/black"
+            android:textColor="@color/secondary"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSelectos"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:checkable="true"
+            android:text="Super Selectos"
+            app:chipStrokeWidth="0.3dp"
+            android:textColor="@color/black"
+            app:chipBackgroundColor="@color/secondary"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCuracao"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:checkable="true"
+            android:text="Curacao"
+            app:chipBackgroundColor="@color/secondary"
+            android:textColor="@color/black"
+            app:chipStrokeWidth="0.3dp"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipDespensa"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:checkable="true"
+            android:gravity="center"
+            android:text="Despensa de Don Juan"
+            app:chipStrokeWidth="0.3dp"
+
+            app:chipBackgroundColor="@color/secondary"
+            android:textColor="@color/black"
+            />
+
+
+    </com.google.android.material.chip.ChipGroup>
+</LinearLayout>

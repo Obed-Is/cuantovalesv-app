@@ -5,6 +5,112 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/secondary"
     tools:context=".pantallas.Inicio">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/super_bouncer"
+            android:text="Cuanto Vale SV"
+            android:textColor="@color/secondary"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+        <TextView
+            android:id="@+id/txtInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/super_bouncer"
+            android:text="Buscar producto"
+
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/black"
+
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="7dp"
+            android:hint="Producto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/txtInput"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtProducto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:fontFamily="monospace"
+                android:inputType="textNoSuggestions"
+                android:textColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                tools:ignore="HardcodedText"
+                android:textStyle="italic"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/selectCantidad"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtLayout"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+
+            app:circularflow_radiusInDP="12dp"
+            android:background="@drawable/bg_spinner"
+            />
+
+        <Button
+            android:id="@+id/btnFiltros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toEndOf="@+id/selectCantidad"
+            app:layout_constraintTop_toBottomOf="@+id/txtLayout"
+            android:text="Seleccionar Sitio"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:backgroundTint="@color/primary"
+
+            android:textColor="@color/white"
+            android:fontFamily="@font/super_bouncer"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
