@@ -83,7 +83,7 @@ class Inicio : AppCompatActivity() {
 
 //        ----- Asignar valores a seleccion de cantidades -----
         val opcionesCantidad = arrayOf(
-            "Cantidad de productos por sitio",
+            "Cantidad de productos",
             "2",
             "3",
             "4",
@@ -91,14 +91,11 @@ class Inicio : AppCompatActivity() {
         )
         val adapter = ArrayAdapter(
             this,
-            android.R.layout.simple_spinner_dropdown_item,
+            R.layout.spinner_item,
             opcionesCantidad
         )
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        adapter.setDropDownViewResource(R.layout.dropdown_spinner_item)
         binding.selectCantidad.adapter = adapter
-        (binding.selectCantidad.selectedView as? TextView)?.setTextColor(
-            ContextCompat.getColor(this,R.color.black)
-        )
     }
 
 

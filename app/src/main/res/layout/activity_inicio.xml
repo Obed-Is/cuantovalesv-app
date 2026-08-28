@@ -5,15 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/secondary"
+    android:background="@color/background"
     tools:context=".pantallas.Inicio">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/appBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="411dp"
+        android:layout_height="110dp"
         android:background="@color/primary"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -21,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/super_bouncer"
+            android:fontFamily="@font/fredoka"
             android:text="Cuanto Vale SV"
             android:textColor="@color/secondary"
             android:textSize="40sp"
@@ -42,12 +43,12 @@
             android:layout_height="wrap_content"
 
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/super_bouncer"
+            android:layout_marginTop="20dp"
             android:text="Buscar producto"
-
             android:textColor="@color/black"
+
             android:textSize="20sp"
+            android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,13 +56,13 @@
             android:id="@+id/txtLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
             android:background="@color/white"
+
+            android:hint="Producto"
             app:boxStrokeColor="@color/black"
             app:hintTextColor="@color/black"
-
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="7dp"
-            android:hint="Producto"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
 
@@ -73,44 +74,84 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:fontFamily="monospace"
                 android:inputType="textNoSuggestions"
-                android:textColor="@color/black"
                 android:outlineSpotShadowColor="@color/black"
-                tools:ignore="HardcodedText"
-                android:textStyle="italic"/>
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                tools:ignore="HardcodedText" />
         </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnBuscar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+
+            android:backgroundTint="@color/primary"
+            android:text="Buscar producto"
+            android:fontFamily="@font/fredoka"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtLayout" />
+
 
         <Spinner
             android:id="@+id/selectCantidad"
-            android:layout_width="120dp"
-            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
 
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtLayout"
             android:layout_marginStart="10dp"
             android:layout_marginTop="7dp"
+            android:background="@drawable/bg_spinner"
+            android:minHeight="48dp"
 
             app:circularflow_radiusInDP="12dp"
-            android:background="@drawable/bg_spinner"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBuscar" />
+
 
         <Button
             android:id="@+id/btnFiltros"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/fredoka"
+            android:gravity="center"
+
+            android:text="Seleccionar Sitio"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toEndOf="@+id/selectCantidad"
+            app:layout_constraintTop_toBottomOf="@+id/btnBuscar"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_goneMarginStart="10dp" />
+
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            app:layout_constraintStart_toEndOf="@+id/selectCantidad"
-            app:layout_constraintTop_toBottomOf="@+id/txtLayout"
-            android:text="Seleccionar Sitio"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="7dp"
-            android:backgroundTint="@color/primary"
+            android:text="Resultados Obtenidos"
+            android:textStyle="bold"
+            android:textSize="8pt"
 
-            android:textColor="@color/white"
-            android:fontFamily="@font/super_bouncer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectCantidad"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
